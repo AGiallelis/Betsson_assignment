@@ -9,7 +9,7 @@ import org.testng.Assert;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-class AppSteps {
+class Logout {
     private static AndroidDriver driver;
 
     @Given("Navigate to the login page")

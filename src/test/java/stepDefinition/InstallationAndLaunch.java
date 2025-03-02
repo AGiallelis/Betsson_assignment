@@ -11,7 +11,7 @@ import org.testng.Assert;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class AppSteps {
+class InstallationAndLaunch {
     private static AndroidDriver driver;
 
     @Given("Install the app from the respective app store \\(Google Play for Android, App Store for iOS\\)")

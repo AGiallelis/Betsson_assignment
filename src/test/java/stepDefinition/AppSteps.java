@@ -11,7 +11,7 @@ import org.testng.Assert;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class AppSteps {
+class AppSteps {
     private static AndroidDriver driver;
 
     @Given("navigate to the login page")
