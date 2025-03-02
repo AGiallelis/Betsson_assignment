@@ -7,11 +7,11 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.Assert;
+import io.cucumber.spring.SpringFactory;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-class Login {
+public class Login {
     private static AndroidDriver driver;
 
     @Given("Navigate to the login page")
@@ -43,12 +43,16 @@ class Login {
             try {
                 DesiredCapabilities caps = new DesiredCapabilities();
                 caps.setCapability("platformName", "Android");
-                caps.setCapability("deviceName", "emulator-5554");
-                caps.setCapability("appPackage", "com.example.app"); // Replace with actual app package
-                caps.setCapability("appActivity", "com.example.app.MainActivity"); // Replace with actual activity
-                driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), caps);
+                caps.setCapability("deviceName", "RFCT3161VCV");
+                caps.setCapability("appPackage", "com.swaglabsmobileapp"); // Replace with actual app package
+                caps.setCapability("appActivity", "com.swaglabsmobileapp.MainActivity"); // Replace with actual activity
+                caps.setCapability("automationName", "UiAutomator2");
+
+                driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), caps);
+                System.out.println("Connection successful!");
             } catch (MalformedURLException e) {
                 e.printStackTrace();
+                System.out.println("Connection unsuccessful!");
             }
         }
     }

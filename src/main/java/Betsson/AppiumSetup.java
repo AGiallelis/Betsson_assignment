@@ -18,23 +18,23 @@ public class AppiumSetup {
         // Set Desired Capabilities for the Android app
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android"); // Set the platform (Android or iOS)
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator"); // Change to your device name
-        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10.0"); // Your Android version (e.g., 10.0)
-        capabilities.setCapability(MobileCapabilityType.APP, "/path/to/your/app.apk"); // Path to your APK file
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "RFCT3161VCV "); // Change to your device name
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "13"); // Your Android version (e.g., 10.0)
+        capabilities.setCapability(MobileCapabilityType.APP, "/Εσωτερικός χώρος αποθήκευσης/Download/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk"); // Path to your APK file
         capabilities.setCapability(MobileCapabilityType.NO_RESET, true); // Don't reset app state between sessions
         capabilities.setCapability(MobileCapabilityType.FULL_RESET, false); // Do not reset app every time
 
         // Additional capabilities as needed
-        capabilities.setCapability("appPackage", "com.example.android"); // Your app's package name
-        capabilities.setCapability("appActivity", "com.example.android.MainActivity"); // Your app's main activity
+        capabilities.setCapability("appPackage", "com.swaglabsmobileapp"); // Your app's package name
+        capabilities.setCapability("appActivity", "com.swaglabsmobileapp.MainActivity"); // Your app's main activity
 
         // Optional: Set up ChromeDriver for running browser-based tests on the device (if necessary)
         capabilities.setCapability("chromedriverExecutable", "/path/to/chromedriver"); // Path to chromedriver (optional, for web view testing)
 
         // Start the Appium server
         // Replace the URL below with the appropriate Appium server URL if running locally or on a grid
-        driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), capabilities);
-
+        driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), capabilities);
+        System.out.println("Connection successful!");
         return driver;
     }
 

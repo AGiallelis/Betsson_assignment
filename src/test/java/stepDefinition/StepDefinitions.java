@@ -6,6 +6,11 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import static org.testng.Assert.assertTrue;
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.remote.MobileCapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class StepDefinitions {
 
@@ -19,7 +24,7 @@ public class StepDefinitions {
 
     @When("I click on the login button")
     public void i_click_on_the_login_button() {
-        appiumSetup.driver.findElement(By.id("com.example.android:id/loginButton")).click();  // Interact with the app
+        AppiumSetup.driver.findElement(By.id("com.example.android:id/loginButton")).click();  // Interact with the app
     }
 
     @Then("I should see the home screen")
