@@ -146,7 +146,7 @@ public class AppSteps {
         System.out.println("Enabling push notifications in app settings.");
     }
 
-    @Then("Wait for a push notification \(e.g., new offer, update\)")
+    @Then("Wait for a push notification \\(e.g., new offer, update\\)")
     public void waitForPushNotification() {
         System.out.println("Waiting for push notification to arrive.");
     }

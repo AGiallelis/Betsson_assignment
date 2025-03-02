@@ -27,7 +27,7 @@ public class AppSteps {
     }
 
     @When("the user enter \"(.*)\" in the password field")
-    @When("Enter a valid password \(e.g., \"secret_sauce\"\)")
+    @When("Enter a valid password \\(e.g., \"secret_sauce\"\\)")
     public void enterPassword(String password) {
         WebElement passwordField = driver.findElement(By.id("password_field_id")); // Replace with actual ID
         passwordField.sendKeys(password);
@@ -49,7 +49,7 @@ public class AppSteps {
         passwordField.clear();
     }
 
-    @Given("Enter a username with special characters \(e.g., \"user!@#\"\)")
+    @Given("Enter a username with special characters \\(e.g., \"user!@#\"\\)")
     public void enterSpecialCharacterUsername() {
         WebElement usernameField = driver.findElement(By.id("username_field_id")); // Replace with actual ID
         usernameField.sendKeys("user!@#");

@@ -55,7 +55,7 @@ public class AppSteps {
         System.out.println("Handling app permissions for location, camera, and storage.");
     }
 
-    @Then("Verify that the app behaves as expected based on the permission granted \(e.g., location-based features won't work if location is denied\)")
+    @Then("Verify that the app behaves as expected based on the permission granted \\(e.g., location-based features won't work if location is denied\\)")
     public void verifyAppBehaviorBasedOnPermissions() {
         System.out.println("Verifying app behavior based on granted permissions.");
     }

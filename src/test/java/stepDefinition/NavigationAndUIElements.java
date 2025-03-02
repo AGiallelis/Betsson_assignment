@@ -50,7 +50,7 @@ public class AppSteps {
         logoutButton.click();
     }
 
-    @Given("From the home screen \(product list\), tap on the \"Cart\" icon")
+    @Given("From the home screen \\(product list\\), tap on the \"Cart\" icon")
     public void tapOnCartIcon() {
         WebElement cartIcon = driver.findElement(By.id("cart_icon_id")); // Replace with actual ID
         cartIcon.click();

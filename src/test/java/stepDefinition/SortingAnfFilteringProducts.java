@@ -55,7 +55,7 @@ public class AppSteps {
         System.out.println("Handling app permissions for location, camera, and storage.");
     }
 
-    @Then("Verify that the app behaves as expected based on the permission granted \(e.g., location-based features won't work if location is denied\)")
+    @Then("Verify that the app behaves as expected based on the permission granted \\(e.g., location-based features won't work if location is denied\\)")
     public void verifyAppBehaviorBasedOnPermissions() {
         System.out.println("Verifying app behavior based on granted permissions.");
     }
@@ -65,13 +65,13 @@ public class AppSteps {
         System.out.println("Logging in to the website.");
     }
 
-    @When("Leave the site idle for the expected session timeout duration \(e.g., 15 minutes\)")
+    @When("Leave the site idle for the expected session timeout duration \\(e.g., 15 minutes\\)")
     public void waitForSessionTimeout() throws InterruptedException {
         System.out.println("Waiting for session timeout.");
         Thread.sleep(15 * 60 * 1000); // Simulating 15-minute wait
     }
 
-    @Then("Try performing an action after timeout \(e.g., add a product to the cart\)")
+    @Then("Try performing an action after timeout \\(e.g., add a product to the cart\\)")
     public void performActionAfterTimeout() {
         System.out.println("Attempting an action after session timeout.");
     }
@@ -82,7 +82,7 @@ public class AppSteps {
         productPage.click();
     }
 
-    @Then("select the \"Price \(low to high\)\" option from the sorting dropdown")
+    @Then("select the \"Price \\(low to high\\)\" option from the sorting dropdown")
     public void sortByPriceLowToHigh() {
         WebElement sortingDropdown = driver.findElement(By.id("sorting_dropdown_id")); // Replace with actual ID
         sortingDropdown.click();
@@ -90,7 +90,7 @@ public class AppSteps {
         lowToHighOption.click();
     }
 
-    @Then("select the \"Price \(high to low\)\" option from the sorting dropdown")
+    @Then("select the \"Price \\(high to low\\)\" option from the sorting dropdown")
     public void sortByPriceHighToLow() {
         WebElement sortingDropdown = driver.findElement(By.id("sorting_dropdown_id")); // Replace with actual ID
         sortingDropdown.click();

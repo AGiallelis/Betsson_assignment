@@ -14,7 +14,7 @@ import java.net.URL;
 public class AppSteps {
     private static AndroidDriver driver;
 
-    @Given("Install the app from the respective app store \(Google Play for Android, App Store for iOS\)")
+    @Given("Install the app from the respective app store \\(Google Play for Android, App Store for iOS\\)")
     public void installAppFromStore() {
         System.out.println("Ensure the app is installed from the respective store.");
     }
